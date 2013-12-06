@@ -1,0 +1,37 @@
+<%= form_for(@reserve_list) do |f| %>
+  <% if @reserve_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reserve_list.errors.count, "error") %> prohibited this reserve_list from being saved:</h2>
+
+      <ul>
+      <% @reserve_list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :lunch %><br />
+    <%= f.text_field :lunch %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.text_field :note %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

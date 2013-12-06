@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @reserve_list.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @reserve_list.name %>
+</p>
+
+<p>
+  <b>Lunch:</b>
+  <%= @reserve_list.lunch %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @reserve_list.note %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @reserve_list.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_reserve_list_path(@reserve_list) %> |
+<%= link_to 'Back', reserve_lists_path %>

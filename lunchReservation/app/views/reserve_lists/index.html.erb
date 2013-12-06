@@ -1,0 +1,31 @@
+<h1>Listing reserve_lists</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Lunch</th>
+    <th>Note</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reserve_lists.each do |reserve_list| %>
+  <tr>
+    <td><%= reserve_list.id %></td>
+    <td><%= reserve_list.name %></td>
+    <td><%= reserve_list.lunch %></td>
+    <td><%= reserve_list.note %></td>
+    <td><%= reserve_list.price %></td>
+    <td><%= link_to 'Show', reserve_list %></td>
+    <td><%= link_to 'Edit', edit_reserve_list_path(reserve_list) %></td>
+    <td><%= link_to 'Destroy', reserve_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reserve list', new_reserve_list_path %>
